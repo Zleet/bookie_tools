@@ -1,0 +1,101 @@
+<!doctype html>
+
+<html>
+
+	<head>
+
+		<meta encoding="UTF-8">
+		
+		<title>Football</title>
+		
+		<style>
+		
+			body {
+				color				: Yellow;
+				background-color	: Black;
+				font				: 16px Arial;
+			}
+		
+			.match_no {
+				color				: Chartreuse;
+				text-align			: right;
+				font-weight			: bold;
+			}
+			
+			.home_team {
+				text-align			: right;
+				font-weight			: bold;
+			}
+		
+			.away_team {
+				text-align			: left;
+				font-weight			: bold;
+			}
+			
+			.league_title {
+				color				: Red;
+				text-align			: center;
+				text-decoration		: underline;
+			}
+			
+			.league_separator {
+				color				: Orange;
+				text-align			: center;
+				font				: 32px Arial;
+				font-style			: italic;
+			}
+			
+			.ko_time {
+				color				: Bisque;
+				text-align			: right;
+				font-weight			: bold;
+			}
+		
+			.date_or_section_divider {
+				color				: Aqua;
+				text-align			: center;
+				font-weight			: bold;
+				text-decoration		: underline;
+			}
+			
+			.f_for_feature {
+				color				: Orange;
+				text-align			: right;
+				font-weight			: bold;
+			}
+			
+			.live_on {
+				color				: Chartreuse;
+				text-align			: left;
+				font-weight			: bold;
+			}
+		</style>
+	
+	</head>
+	
+	<body>
+	
+	
+		<h1>FOOTBALL TO BUILD</h1>
+		<div id="domestic_football_div">
+		{{football_table_goes_here}}
+		</div>
+		
+		<h2>Teletext Names</h2>
+		<textarea rows="6" cols="60">{{league_titles_text_goes_here}}</textarea>
+		
+		<h2>Team Names</h2>
+		<textarea rows="6" cols="60">{{team_names_text_goes_here}}</textarea>
+	
+		<h2>GUIScript Data</h2>
+		<textarea rows="6" cols="60">{{guiscript_data_goes_here}}</textarea>
+		
+		<h2>Teletext Name Counts</h2>
+		<textarea rows="6" cols="60">{{teletext_name_count_lines_go_here}}</textarea>
+	
+		<h2>Football Coupon Strings</h2>
+		<textarea rows="6" cols="60">{{football_coupon_strings_go_here}}</textarea>
+	
+	</body>
+
+</html>

@@ -1,0 +1,25 @@
+BAD NAME,GOOD NAME
+Sheffield Utd,Sheff Utd
+QPR,Q.P.R.
+Dagenham & Red.,Dag 
+Toronto FC,Toronto
+Lokomotiv Moscow,Loko Moscow
+G-Osaka,Gamba Osaka
+FC Porto,Porto
+St. Gallen,St Gallen
+Borussia M'gladbach,M'gladbach
+Lincoln City,Lincoln
+Notts County,Notts Co
+Bristol Rovers,Bristol Rvrs
+Ross County,Ross Co
+FK Rostov,Rostov
+Drogheda Utd,Drogheda
+Hampton & Richmond,Hampton and Richmond
+New England Revolution,New England Rev
+Guangzhou R&F,Guangzhou
+FC Botosani,Botosani
+Nottingham Forest,N.Forest
+Milton Keynes Dons,MK Dons
+Milton Keyne Dons,MK Dons
+Fleetwood Town,Fleetwood
+Man United,Man Utd
