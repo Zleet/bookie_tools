@@ -1,0 +1,26 @@
+Stuff to write/fix:
+
+- do colours in the match list window:
+aqua for match no
+green/chartreuse for ' v ' between home and away teams
+DONE
+
+- highlight the current match in the match list window
+DONE
+
+- call update_match_list_window() when the next or previous match button is pressed
+DONE
+
+- fix read football webpage so that it updates the match_list_window when a football page is read
+
+- add additional settings required:
+
+                        X    Y
+match #1 match market   -    -
+match #2 match market   -    -
+match #3 march market   -    -
+
+- move calculate_max_match_line_length() into update_match_list_window() 
+
+- remove setting that isn't used:
+test cell
