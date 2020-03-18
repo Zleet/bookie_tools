@@ -1,0 +1,204 @@
+03     	# month
+04   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+03     	# month
+07   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+03     	# month
+11   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+03     	# month
+14   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+03     	# month
+18   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+03     	# month
+21   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+03     	# month
+25   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+03     	# month
+28   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+04     	# month
+01   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+04     	# month
+04   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+04     	# month
+08   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+04     	# month
+11   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+04     	# month
+15   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+04     	# month
+18   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+04     	# month
+22   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+04     	# month
+25   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+04     	# month
+29   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+05     	# month
+02   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+05     	# month
+06   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+05     	# month
+09   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+05     	# month
+13   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+05     	# month
+16   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+05     	# month
+20   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+05     	# month
+23   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+05     	# month
+27   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+05     	# month
+30   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+06     	# month
+03   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+06     	# month
+06   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+06     	# month
+10   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+06     	# month
+13   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+06     	# month
+17   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+06     	# month
+20   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+06     	# month
+24   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================
+06     	# month
+27   	# day
+19     	# hour
+45     	# minute
+Lucky Numbers 18 # top market title
+# =====================

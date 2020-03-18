@@ -1,0 +1,276 @@
+# ==================
+# Match #1
+29            # day
+07            # month
+2017          # year
+13            # hour
+30            # minutes
+Feyenoord     # home_team
+Real Sociedad # away_team
+1/1           # home_price
+12/5          # draw_price
+9/4           # away_price
+# ==================
+# Match #2
+29             # day
+07             # month
+2017           # year
+14             # hour
+00             # minutes
+Metz           # home_team
+Crystal Palace # away_team
+2/1            # home_price
+23/10          # draw_price
+23/20          # away_price
+# ==================
+# Match #3
+29            # day
+07            # month
+2017          # year
+14            # hour
+30            # minutes
+Werder Bremen # home_team
+West Ham      # away_team
+7/5           # home_price
+23/10         # draw_price
+13/8          # away_price
+# ==================
+# Match #4
+29          # day
+07          # month
+2017        # year
+15          # hour
+00          # minutes
+Aston Villa # home_team
+Watford     # away_team
+13/10       # home_price
+12/5        # draw_price
+17/10       # away_price
+# ==================
+# Match #5
+29         # day
+07         # month
+2017       # year
+15         # hour
+00         # minutes
+Birmingham # home_team
+Swansea    # away_team
+17/10      # home_price
+11/5       # draw_price
+11/8       # away_price
+# ==================
+# Match #6
+29     # day
+07     # month
+2017   # year
+15     # hour
+00     # minutes
+Bolton # home_team
+Stoke  # away_team
+23/10  # home_price
+23/10  # draw_price
+1/1    # away_price
+# ==================
+# Match #7
+29             # day
+07             # month
+2017           # year
+15             # hour
+00             # minutes
+Bor.M'Gladbach # home_team
+Malaga         # away_team
+10/11          # home_price
+5/2            # draw_price
+12/5           # away_price
+# ==================
+# Match #8
+29         # day
+07         # month
+2017       # year
+15         # hour
+00         # minutes
+Brentford  # home_team
+Celta Vigo # away_team
+7/4        # home_price
+5/2        # draw_price
+6/5        # away_price
+# ==================
+# Match #9
+29       # day
+07       # month
+2017     # year
+15       # hour
+00       # minutes
+Charlton # home_team
+Ipswich  # away_team
+8/5      # home_price
+5/2      # draw_price
+13/10    # away_price
+# ==================
+# Match #10
+29         # day
+07         # month
+2017       # year
+15         # hour
+00         # minutes
+Derby      # home_team
+Hoffenheim # away_team
+11/5       # home_price
+12/5       # draw_price
+1/1        # away_price
+# ==================
+# Match #11
+29        # day
+07        # month
+2017      # year
+15        # hour
+00        # minutes
+Fulham    # home_team
+Wolfsburg # away_team
+2/1       # home_price
+12/5      # draw_price
+11/10     # away_price
+# ==================
+# Match #12
+29      # day
+07      # month
+2017    # year
+15      # hour
+00      # minutes
+Grimsby # home_team
+Wigan   # away_team
+5/2     # home_price
+13/5    # draw_price
+17/20   # away_price
+# ==================
+# Match #13
+29     # day
+07     # month
+2017   # year
+15     # hour
+00     # minutes
+Leeds  # home_team
+Oxford # away_team
+4/9    # home_price
+3/1    # draw_price
+5/1    # away_price
+# ==================
+# Match #14
+29        # day
+07        # month
+2017      # year
+15        # hour
+00        # minutes
+Mainz     # home_team
+Newcastle # away_team
+6/5       # home_price
+12/5      # draw_price
+9/5       # away_price
+# ==================
+# Match #15
+29            # day
+07            # month
+2017          # year
+15            # hour
+00            # minutes
+Middlesbrough # home_team
+Augsburg      # away_team
+13/10         # home_price
+9/4           # draw_price
+7/4           # away_price
+# ==================
+# Match #16
+29       # day
+07       # month
+2017     # year
+15       # hour
+00       # minutes
+Norwich  # home_team
+Brighton # away_team
+6/4      # home_price
+9/4      # draw_price
+6/4      # away_price
+# ==================
+# Match #17
+29           # day
+07           # month
+2017         # year
+15           # hour
+00           # minutes
+Nottm Forest # home_team
+Burnley      # away_team
+12/5         # home_price
+5/2          # draw_price
+10/11        # away_price
+# ==================
+# Match #18
+29          # day
+07          # month
+2017        # year
+15          # hour
+00          # minutes
+QPR         # home_team
+Bournemouth # away_team
+17/10       # home_price
+12/5        # draw_price
+5/4         # away_price
+# ==================
+# Match #19
+29      # day
+07      # month
+2017    # year
+15      # hour
+00      # minutes
+Reading # home_team
+Vitesse # away_team
+6/4     # home_price
+5/2     # draw_price
+11/8    # away_price
+# ==================
+# Match #20
+29        # day
+07        # month
+2017      # year
+15        # hour
+00        # minutes
+Rotherham # home_team
+Barnsley  # away_team
+7/4       # home_price
+11/4      # draw_price
+11/10     # away_price
+# ==================
+# Match #21
+29        # day
+07        # month
+2017      # year
+15        # hour
+00        # minutes
+Wolves    # home_team
+Leicester # away_team
+23/10     # home_price
+23/10     # draw_price
+1/1       # away_price
+# ==================
+# Match #22
+29          # day
+07          # month
+2017        # year
+17          # hour
+30          # minutes
+St Etienne  # home_team
+Southampton # away_team
+11/5        # home_price
+23/10       # draw_price
+21/20       # away_price
+# ==================
+# Match #23
+29              # day
+07              # month
+2017            # year
+18              # hour
+00              # minutes
+Sporting Lisbon # home_team
+Fiorentina      # away_team
+4/5             # home_price
+5/2             # draw_price
+14/5            # away_price

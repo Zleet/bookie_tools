@@ -1,0 +1,6 @@
+{{month_integer}}     	# month
+{{day_integer}}   	# day
+14     	# hour
+00     	# minute
+{{day_name}} Aft Daily Millions # top market title
+# =====================

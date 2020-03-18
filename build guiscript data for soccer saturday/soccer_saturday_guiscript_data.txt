@@ -1,0 +1,532 @@
+# Sunderland
+# Portsmouth
+19/20
+3/4
+19/20
+3/4
+
+# Arsenal
+# Burnley
+3/4
+19/20
+3/4
+19/20
+
+# Aston Villa
+# Bournemouth
+17/20
+17/20
+17/20
+17/20
+
+# Brighton
+# West Ham
+17/20
+17/20
+17/20
+17/20
+
+# Everton
+# Watford
+4/5
+10/11
+4/5
+10/11
+
+# Norwich
+# Newcastle
+17/20
+17/20
+17/20
+17/20
+
+# Southampton
+# Liverpool
+3/4
+19/20
+3/4
+19/20
+
+# Man City
+# Tottenham
+8/11
+Evs
+8/11
+Evs
+
+# Barnsley
+# Charlton
+17/20
+17/20
+17/20
+17/20
+
+# Blackburn
+# Middlesbrough
+17/20
+17/20
+17/20
+17/20
+
+# Brentford
+# Hull
+4/5
+10/11
+4/5
+10/11
+
+# Bristol City
+# QPR
+17/20
+17/20
+17/20
+17/20
+
+# Luton
+# West Brom
+17/20
+17/20
+17/20
+17/20
+
+# Millwall
+# Sheff Wed
+19/20
+3/4
+19/20
+3/4
+
+# Nottm Forest
+# Birmingham
+19/20
+3/4
+19/20
+3/4
+
+# Stoke
+# Derby
+19/20
+3/4
+19/20
+3/4
+
+# Swansea
+# Preston
+17/20
+17/20
+17/20
+17/20
+
+# Wigan
+# Leeds
+17/20
+17/20
+17/20
+17/20
+
+# AFC Wimbledon
+# Accrington
+17/20
+17/20
+17/20
+17/20
+
+# Blackpool
+# Oxford Utd
+19/20
+3/4
+19/20
+3/4
+
+# Burton
+# Rotherham
+17/20
+17/20
+17/20
+17/20
+
+# Coventry
+# Bristol Rovers
+19/20
+3/4
+19/20
+3/4
+
+# Doncaster
+# Fleetwood
+10/11
+4/5
+10/11
+4/5
+
+# Lincoln
+# Southend
+19/20
+3/4
+19/20
+3/4
+
+# Peterborough
+# Ipswich
+10/11
+4/5
+10/11
+4/5
+
+# Shrewsbury
+# Rochdale
+17/20
+17/20
+17/20
+17/20
+
+# Tranmere
+# Bolton
+4/5
+10/11
+4/5
+10/11
+
+# Wycombe
+# MK Dons
+17/20
+17/20
+17/20
+17/20
+
+# Bradford City
+# Oldham
+17/20
+17/20
+17/20
+17/20
+
+# Carlisle
+# Mansfield
+17/20
+17/20
+17/20
+17/20
+
+# Colchester
+# Cambridge Utd
+19/20
+3/4
+19/20
+3/4
+
+# Crewe
+# Walsall
+17/20
+17/20
+17/20
+17/20
+
+# Exeter
+# Swindon
+19/20
+3/4
+19/20
+3/4
+
+# Forest Green
+# Grimsby
+19/20
+3/4
+19/20
+3/4
+
+# Leyton Orient
+# Stevenage
+19/20
+3/4
+19/20
+3/4
+
+# Morecambe
+# Cheltenham
+17/20
+17/20
+17/20
+17/20
+
+# Newport Co
+# Plymouth
+10/11
+4/5
+10/11
+4/5
+
+# Northampton
+# Macclesfield
+17/20
+17/20
+17/20
+17/20
+
+# Salford
+# Port Vale
+19/20
+3/4
+19/20
+3/4
+
+# Scunthorpe
+# Crawley
+17/20
+17/20
+17/20
+17/20
+
+# Celtic
+# Dunfermline
+8/13
+6/5
+8/13
+6/5
+
+# Forfar Athletic
+# Livingston
+4/5
+10/11
+4/5
+10/11
+
+# Hibernian
+# Morton
+4/5
+10/11
+4/5
+10/11
+
+# Kilmarnock
+# Hamilton
+17/20
+17/20
+17/20
+17/20
+
+# Partick Thistle
+# Ross County
+4/5
+10/11
+4/5
+10/11
+
+# Airdrieonians
+# Clyde
+4/5
+10/11
+4/5
+10/11
+
+# Falkirk
+# Montrose
+8/11
+Evs
+8/11
+Evs
+
+# Peterhead
+# Dumbarton
+4/5
+10/11
+4/5
+10/11
+
+# Stranraer
+# Raith
+3/4
+19/20
+3/4
+19/20
+
+# Annan
+# Albion Rovers
+4/5
+10/11
+4/5
+10/11
+
+# Brechin
+# Queen's Park
+17/20
+17/20
+17/20
+17/20
+
+# Cove Rangers
+# Cowdenbeath
+3/4
+19/20
+3/4
+19/20
+
+# Edinburgh City
+# Stirling
+3/4
+19/20
+3/4
+19/20
+
+# Elgin City
+# Stenhousemuir
+3/4
+19/20
+3/4
+19/20
+
+# Cliftonville
+# Crusaders
+3/4
+19/20
+3/4
+19/20
+
+# Dungannon
+# Glentoran
+3/4
+19/20
+3/4
+19/20
+
+# Glenavon
+# Warrenpoint
+7/10
+21/20
+7/10
+21/20
+
+# Institute
+# Carrick Rangers
+4/5
+10/11
+4/5
+10/11
+
+# Larne
+# Ballymena
+3/4
+19/20
+3/4
+19/20
+
+# Linfield
+# Coleraine
+3/4
+19/20
+3/4
+19/20
+
+# Sheff Utd
+# C.Palace
+19/20
+3/4
+19/20
+3/4
+
+# Chelsea
+# Leicester
+17/20
+17/20
+17/20
+17/20
+
+# Reading
+# Cardiff
+17/20
+17/20
+17/20
+17/20
+
+# Dundee
+# Aberdeen
+17/20
+17/20
+17/20
+17/20
+
+# East Fife
+# Rangers
+8/13
+6/5
+8/13
+6/5
+
+# Wolves
+# Man Utd
+10/11
+4/5
+10/11
+4/5
+
+# 
+# 
+#N/A
+#N/A
+#N/A
+#N/A
+
+# 
+# 
+#N/A
+#N/A
+#N/A
+#N/A
+
+# 
+# 
+#N/A
+#N/A
+#N/A
+#N/A
+
+# 
+# 
+#N/A
+#N/A
+#N/A
+#N/A
+
+# 
+# 
+#N/A
+#N/A
+#N/A
+#N/A
+
+# 
+# 
+#N/A
+#N/A
+#N/A
+#N/A
+
+# 
+# 
+#N/A
+#N/A
+#N/A
+#N/A
+
+# 
+# 
+#N/A
+#N/A
+#N/A
+#N/A
+
+# 
+# 
+#N/A
+#N/A
+#N/A
+#N/A
+
+# 
+# 
+#N/A
+#N/A
+#N/A
+#N/A
+

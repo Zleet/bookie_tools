@@ -1,0 +1,154 @@
+# Inverness
+# Alloa
+17/20
+17/20
+17/20
+17/20
+
+# Morton
+# Ross Co
+17/20
+17/20
+17/20
+17/20
+
+# Airdrieonians
+# Raith
+4/5
+10/11
+4/5
+10/11
+
+# Brechin
+# Dumbarton
+17/20
+17/20
+17/20
+17/20
+
+# East Fife
+# Arbroath
+3/4
+19/20
+3/4
+19/20
+
+# Forfar Athletic
+# Stenhousemuir
+4/5
+10/11
+4/5
+10/11
+
+# Stranraer
+# Montrose
+4/5
+10/11
+4/5
+10/11
+
+# Berwick
+# Annan
+17/20
+17/20
+17/20
+17/20
+
+# Clyde
+# Edinburgh City
+17/20
+17/20
+17/20
+17/20
+
+# Elgin City
+# Cowdenbeath
+17/20
+17/20
+17/20
+17/20
+
+# Queen's Park
+# Albion Rovers
+4/5
+10/11
+4/5
+10/11
+
+# Stirling
+# Peterhead
+4/5
+10/11
+4/5
+10/11
+
+# Cliftonville
+# Linfield
+8/11
+Evs
+8/11
+Evs
+
+# Glentoran
+# Dungannon
+3/4
+19/20
+3/4
+19/20
+
+# Warrenpoint
+# Crusaders
+4/6
+11/10
+4/6
+11/10
+
+# Watford
+# C Palace
+10/11
+4/5
+10/11
+4/5
+
+# Fulham
+# Burnley
+19/20
+3/4
+19/20
+3/4
+
+# Newcastle
+# Chelsea
+17/20
+17/20
+17/20
+17/20
+
+# Rotherham
+# Millwall
+17/20
+17/20
+17/20
+17/20
+
+# Motherwell
+# Rangers
+4/5
+10/11
+4/5
+10/11
+
+# Celtic
+# Hamilton
+7/10
+21/20
+7/10
+21/20
+
+# Man Utd
+# Tottenham
+17/20
+17/20
+17/20
+17/20
+

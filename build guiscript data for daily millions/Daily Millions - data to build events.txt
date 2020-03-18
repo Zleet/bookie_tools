@@ -1,0 +1,252 @@
+15   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Sat Aft Daily Millions # top market title
+# =====================
+16    	# day
+12     	# month
+14     	# hour
+00     	# minute
+Sun Aft Daily Millions # top market title
+# =====================
+17    	# day
+12     	# month
+14     	# hour
+00     	# minute
+Mon Aft Daily Millions # top market title
+# =====================
+**    	# day
+12     	# month
+14     	# hour
+00     	# minute
+Tues Aft Daily Millions # top market title
+# =====================
+**    	# day
+12     	# month
+14     	# hour
+00     	# minute
+Wed Aft Daily Millions # top market title
+# =====================
+**    	# day
+12     	# month
+14     	# hour
+00     	# minute
+Thurs Aft Daily Millions # top market title
+# =====================
+**    	# day
+12     	# month
+14     	# hour
+00     	# minute
+Fri Aft Daily Millions # top market title
+# =====================
+**   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Sat Aft Daily Millions # top market title
+# =====================
+**    	# day
+01     	# month
+14     	# hour
+00     	# minute
+Sun Aft Daily Millions # top market title
+# =====================
+**    	# day
+01     	# month
+14     	# hour
+00     	# minute
+Mon Aft Daily Millions # top market title
+# =====================
+**    	# day
+01     	# month
+14     	# hour
+00     	# minute
+Tues Aft Daily Millions # top market title
+# =====================
+**    	# day
+01     	# month
+14     	# hour
+00     	# minute
+Wed Aft Daily Millions # top market title
+# =====================
+**    	# day
+01     	# month
+14     	# hour
+00     	# minute
+Thurs Aft Daily Millions # top market title
+# =====================
+**    	# day
+01     	# month
+14     	# hour
+00     	# minute
+Fri Aft Daily Millions # top market title
+# =====================
+**   	# day
+01     	# month
+14     	# hour
+00     	# minute
+Sat Aft Daily Millions # top market title
+# =====================
+**    	# day
+01     	# month
+14     	# hour
+00     	# minute
+Sun Aft Daily Millions # top market title
+# =====================
+**    	# day
+01     	# month
+14     	# hour
+00     	# minute
+Mon Aft Daily Millions # top market title
+# =====================
+**    	# day
+01     	# month
+14     	# hour
+00     	# minute
+Tues Aft Daily Millions # top market title
+# =====================
+**    	# day
+01     	# month
+14     	# hour
+00     	# minute
+Wed Aft Daily Millions # top market title
+# =====================
+**    	# day
+01     	# month
+14     	# hour
+00     	# minute
+Thurs Aft Daily Millions # top market title
+# =====================
+**    	# day
+01     	# month
+14     	# hour
+00     	# minute
+Fri Aft Daily Millions # top market title
+# =====================
+**   	# day
+01     	# month
+14     	# hour
+00     	# minute
+Sat Aft Daily Millions # top market title
+# =====================
+**    	# day
+01     	# month
+14     	# hour
+00     	# minute
+Sun Aft Daily Millions # top market title
+# =====================
+**    	# day
+01     	# month
+14     	# hour
+00     	# minute
+Mon Aft Daily Millions # top market title
+# =====================
+**    	# day
+01     	# month
+14     	# hour
+00     	# minute
+Tues Aft Daily Millions # top market title
+# =====================
+**    	# day
+01     	# month
+14     	# hour
+00     	# minute
+Wed Aft Daily Millions # top market title
+# =====================
+**    	# day
+01     	# month
+14     	# hour
+00     	# minute
+Thurs Aft Daily Millions # top market title
+# =====================
+**    	# day
+01     	# month
+14     	# hour
+00     	# minute
+Fri Aft Daily Millions # top market title
+# =====================
+**   	# day
+01     	# month
+14     	# hour
+00     	# minute
+Sat Aft Daily Millions # top market title
+# =====================
+**    	# day
+01     	# month
+14     	# hour
+00     	# minute
+Sun Aft Daily Millions # top market title
+# =====================
+**    	# day
+01     	# month
+14     	# hour
+00     	# minute
+Mon Aft Daily Millions # top market title
+# =====================
+**    	# day
+01     	# month
+14     	# hour
+00     	# minute
+Tues Aft Daily Millions # top market title
+# =====================
+**    	# day
+01     	# month
+14     	# hour
+00     	# minute
+Wed Aft Daily Millions # top market title
+# =====================
+**    	# day
+01     	# month
+14     	# hour
+00     	# minute
+Thurs Aft Daily Millions # top market title
+# =====================
+**    	# day
+01     	# month
+14     	# hour
+00     	# minute
+Fri Aft Daily Millions # top market title
+# =====================
+**   	# day
+01     	# month
+14     	# hour
+00     	# minute
+Sat Aft Daily Millions # top market title
+# =====================
+**    	# day
+01     	# month
+14     	# hour
+00     	# minute
+Sun Aft Daily Millions # top market title
+# =====================
+**    	# day
+01     	# month
+14     	# hour
+00     	# minute
+Mon Aft Daily Millions # top market title
+# =====================
+**    	# day
+01     	# month
+14     	# hour
+00     	# minute
+Tues Aft Daily Millions # top market title
+# =====================
+**    	# day
+01     	# month
+14     	# hour
+00     	# minute
+Wed Aft Daily Millions # top market title
+# =====================
+**    	# day
+01     	# month
+14     	# hour
+00     	# minute
+Thurs Aft Daily Millions # top market title
+# =====================
+**    	# day
+01     	# month
+14     	# hour
+00     	# minute
+Fri Aft Daily Millions # top market title
+# =====================

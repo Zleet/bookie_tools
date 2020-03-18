@@ -1,0 +1,12 @@
+{{wednesday_day_number}}            # day
+{{wednesday_month_number}}     	      # month
+19            # hour
+45     	      # minute
+Lucky 21s Wed # market title
+# ============================
+{{saturday_day_number}}    	      # day
+{{saturday_month_number}}     	      # month
+19            # hour
+45     	      # minute
+Lucky 21s Sat # market title
+# ============================

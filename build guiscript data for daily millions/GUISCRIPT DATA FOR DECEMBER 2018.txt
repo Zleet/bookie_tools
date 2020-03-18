@@ -1,0 +1,186 @@
+01   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Sat Aft Daily Millions # top market title
+# =====================
+02   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Sun Aft Daily Millions # top market title
+# =====================
+03   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Mon Aft Daily Millions # top market title
+# =====================
+04   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Tues Aft Daily Millions # top market title
+# =====================
+05   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Wed Aft Daily Millions # top market title
+# =====================
+06   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Thurs Aft Daily Millions # top market title
+# =====================
+07   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Fri Aft Daily Millions # top market title
+# =====================
+08   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Sat Aft Daily Millions # top market title
+# =====================
+09   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Sun Aft Daily Millions # top market title
+# =====================
+10   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Mon Aft Daily Millions # top market title
+# =====================
+11   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Tues Aft Daily Millions # top market title
+# =====================
+12   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Wed Aft Daily Millions # top market title
+# =====================
+13   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Thurs Aft Daily Millions # top market title
+# =====================
+14   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Fri Aft Daily Millions # top market title
+# =====================
+15   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Sat Aft Daily Millions # top market title
+# =====================
+16   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Sun Aft Daily Millions # top market title
+# =====================
+17   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Mon Aft Daily Millions # top market title
+# =====================
+18   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Tues Aft Daily Millions # top market title
+# =====================
+19   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Wed Aft Daily Millions # top market title
+# =====================
+20   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Thurs Aft Daily Millions # top market title
+# =====================
+21   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Fri Aft Daily Millions # top market title
+# =====================
+22   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Sat Aft Daily Millions # top market title
+# =====================
+23   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Sun Aft Daily Millions # top market title
+# =====================
+24   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Mon Aft Daily Millions # top market title
+# =====================
+25   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Tues Aft Daily Millions # top market title
+# =====================
+26   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Wed Aft Daily Millions # top market title
+# =====================
+27   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Thurs Aft Daily Millions # top market title
+# =====================
+28   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Fri Aft Daily Millions # top market title
+# =====================
+29   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Sat Aft Daily Millions # top market title
+# =====================
+30   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Sun Aft Daily Millions # top market title
+# =====================
+31   	# day
+12     	# month
+14     	# hour
+00     	# minute
+Mon Aft Daily Millions # top market title
+# =====================
