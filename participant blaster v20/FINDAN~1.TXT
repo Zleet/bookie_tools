@@ -1,0 +1,29 @@
+FOOTBALL SCHMOOTBALL
+
+A program to enter footbal changes.
+
+INTERFACE DESIGN
+Required widgets:
+
+Enter coordinates for:
+Save button
+Next market button
+
+A text widget to paste in the football changes csv data
+A text widget to display all matches and highlight the match that will be entered next.
+
+Tickboxes to enable/disable changes to:
+1. match betting
+2. handicap betting
+3. 
+
+
+A button to enter changes for a trio match
+A button to enter changes for a feature match
+
+
+
+
+
+
+

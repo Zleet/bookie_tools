@@ -1,0 +1,2370 @@
+<!doctype html>
+<html>
+
+	<head>
+
+		<title>Match mockup</title>
+
+		<style>
+
+			body {
+					color				: Yellow;
+					background-color	: Black;
+					font				: 14px arial;
+					font-weight			: bold;
+			}
+
+			.player_name {
+					color 				: Yellow;
+					text-align			: right;
+			}
+			
+			.letters_to_type {
+					color               : Aqua;
+					text-decoration		: underline;
+			}
+			
+			.first_scorer_price {
+					color 				: Chartreuse;
+					text-align			: right;
+			}
+			
+			.anytime_scorer_price {
+					color 				: Aqua;
+					text-align			: right;
+			}
+			
+			.first_goal_wincast_price {
+					color 				: Red;
+					text-align			: right;
+			}
+			
+			.anytime_wincast_price {
+					color 				: Orange;
+					text-align			: right;
+			}
+			
+			.player_name_header {
+					color 				: Yellow;
+					text-align			: right;
+					text-decoration		: underline;
+			}
+			
+			.first_scorer_price_header {
+					color 				: Chartreuse;
+					text-align			: right;
+					text-decoration		: underline;
+			}
+			
+			.anytime_scorer_price_header {
+					color 				: Aqua;
+					text-align			: right;
+					text-decoration		: underline;
+			}
+			
+			.first_goal_wincast_price_header {
+					color 				: Red;
+					text-align			: right;
+					text-decoration		: underline;
+			}
+
+			.anytime_wincast_price_header {
+					color 				: Orange;
+					text-align			: right;
+					text-decoration		: underline;
+			}
+			
+			.centre_column {
+					width				: 50px;
+			}
+			
+			.team_name {
+					color				: Orange;
+					text-decoration		: underline;
+					font-style			: italic;
+			}
+			
+			#match_no_info {
+			    color       : Aqua;
+			    padding     : 0px 0px 0px 10px;
+			    font		: 18px arial;
+				font-weight	: bold;
+				font-style	: italic;
+			}
+			
+			#amelyn_logo_table {
+			    float       : right;
+			    color       : Chartreuse;
+			    padding     : 5px;
+			    font		: 18px arial;
+				font-weight	: bold;
+				font-style  : italic;
+			}
+
+		</style>
+
+		<script>
+		// ===================================================================================================
+		// Initialise page by making all match divs invisible, except for the first one
+		function initialise_page() {
+		
+			// get all the divs with class "match_div"
+			var match_divs = document.getElementsByClassName("match_div");
+			// make them all invisible
+			var total_match_divs = match_divs.length;
+			for (var i = 0; i < total_match_divs; i++) {
+				var current_match_div = match_divs[i];
+				current_match_div.style.display = "none";
+			}
+			// make the div with id "div_1" visible
+			var first_match_div = document.getElementById("div_1");
+			first_match_div.style.display = "block";
+			
+			// set match_no_info string
+			var match_no_info_div = document.getElementById("match_no_info");
+			match_no_info_div.innerHTML = "Match #1 of " + total_match_divs;
+			
+			return;
+		}
+		// ===================================================================================================
+		// Function called when the user selects one of the matches in the dropdown box
+		function new_match_selected() {
+		
+			// get the value of the option the user has selected in the dropdown box
+			// (e.g. "div_1", "div_2" etc.)
+			var dd_box = document.getElementById("match_select_dropdown_box");
+			var dd_box_selected_div = dd_box.options[dd_box.selectedIndex].value;
+			// alert("dd_box_selected_box = " + dd_box_selected_div);
+			// get all the divs with class "match_div"
+			var match_divs = document.getElementsByClassName("match_div");
+			// make them all invisible
+			var total_match_divs = match_divs.length;
+			for (var i = 0; i < total_match_divs; i++) {
+				var current_match_div = match_divs[i];
+				current_match_div.style.display = "none";
+			}
+
+			// make the div containing the match the user has selected visible
+			var user_selected_div = document.getElementById(dd_box_selected_div);
+			user_selected_div.style.display = "block";
+			
+			// update match_no_div
+			var div_no_string = dd_box_selected_div.replace('div_', '');
+			var current_div_no = parseInt(div_no_string);
+			var match_no_info_div = document.getElementById("match_no_info");
+			match_no_info_div.innerHTML = "Match #" + current_div_no + " of " + match_divs.length;
+		
+			return;
+		}
+		// ===================================================================================================
+		// Called when the user clicks on either of the arrow keys to the right of the dropdown menu, thereby
+		// navigating to the previous or next match div
+		function navigate_divs(div_change) {
+		  
+		  // work out how many match divs there are
+		  var match_divs = document.getElementsByClassName("match_div");
+		  var total_match_divs = match_divs.length;
+		  // figure out what the current match div no is
+		  var match_select_dd_box = document.getElementById("match_select_dropdown_box");
+		  var dd_box_value = match_select_dd_box.value;
+		  var div_no_string = dd_box_value.replace('div_', '');
+		  // window.alert('div_no_string = ' + div_no_string);
+		  var current_div_no = parseInt(div_no_string);
+		  // increase or decrease the current match div depending on div_change
+		  if (div_change == -1) {
+		    if (current_div_no > 1) {
+		      current_div_no--;
+		    }
+		  }
+		  if (div_change == 1) {
+		    if (current_div_no < total_match_divs) {
+		      current_div_no++;
+		    }
+		  }
+		  var new_match_div = 'div_' + current_div_no;
+		  // test print
+		  var alert_string = 'Old div name was: ' + dd_box_value + "\n";
+		  alert_string += 'New div name is: ' + new_match_div;
+		  // window.alert(alert_string);
+		  // change the current div selected in the dropdown box
+		  match_select_dd_box.value = new_match_div;
+		  // loop through all match divs, make them all invisible
+			for (var i = 0; i < total_match_divs; i++) {
+				var current_match_div = match_divs[i];
+				current_match_div.style.display = "none";
+			}
+			// make the newly selected div visible
+			var user_selected_div = document.getElementById(new_match_div);
+			user_selected_div.style.display = "block";
+			
+			// update match_no_div
+			var match_no_info_div = document.getElementById("match_no_info");
+			match_no_info_div.innerHTML = "Match #" + current_div_no + " of " + match_divs.length;
+
+		  return;
+		}
+		// ===================================================================================================
+		</script>
+
+	</head>
+	
+	<body onload="initialise_page()">
+	
+    <select style="margin: 10px;" onchange="new_match_selected()" id="match_select_dropdown_box">
+        <option value="div_1">Venezuela v Uruguay</option>
+        <option value="div_2">Bulgaria v France</option>
+    </select>
+    
+    <button onclick="navigate_divs(-1)"><</button>
+    <button onclick="navigate_divs(1)">></button>
+    
+    <span id="match_no_info"></span>
+    
+    <table id="amelyn_logo_table">
+      <tr>
+        <td style="padding: 0px 10px 0px 0px;">
+          Scorers/Wincasts Dashboard
+        </td>
+        <td style="color: Orange;">
+          Amelyn Technologies 2015
+        </td>
+      </tr>
+    </table>
+    
+		<br>
+		
+    		<div class="match_div" id="div_1">
+	
+		<textarea rows="35" cols="25" style="float:left; margin: 10px;">
+VENEZUELA PLAYERS:
+Salomon,Rondon
+Josef,Martinez
+Anthony,Blondell
+Edder,Farias
+Ronaldo,Chacon
+Romulo,Otero
+Yohandry,Orozco
+Jefferson,Savarino
+Samuel,Sosa
+Jhon,Murillo
+Sergio,Cordova
+Yefferson,Soteldo
+Ronaldo,Lucena
+Jhon,Chancellor
+Junior,Moreno
+Mikel,Villanueva
+Jose,Velazquez
+Rubert,Quijada
+Wilker,Angel
+Jose,Hernandez
+Juan,Colina
+Ronald,Hernandez
+Victor,Garcia
+Tomas,Rincon
+
+URUGUAY PLAYERS:
+Edinson,Cavani
+Luis,Suarez
+Maximiliano,Gomez
+Jonathan,Urretavizcaya
+Cristhian,Stuani
+Nicolas,Lodeiro
+Cristian,Rodriguez
+Gaston,Pereiro
+Giorgian De,Arrascaeta
+Carlos,Sanchez
+Nahitan,Nandez
+Alvaro,Gonzalez
+Rodrigo,Bentancur
+Federico,Valverde
+Diego,Godin
+Matias,Vecino
+Mauricio,Lemos
+Egidio Arevalo,Rios
+Jose,Gimenez
+Martin,Caceres
+Mathias,Corujo
+Maxi,Pereira
+Sebastian,Coates
+Gaston,Silva
+
+WINCAST STRINGS (11):
+Rondon/Venezuela
+Martinez/Venezuela
+Blondell/Venezuela
+Farias/Venezuela
+Chacon/Venezuela
+Cavani/Uruguay
+Suarez/Uruguay
+Gomez/Uruguay
+Urretavizcaya/Uruguay
+Stuani/Uruguay
+Lodeiro/Uruguay
+
+***** CSV DATA *****
+
+=== HOME TEAM ===
+team name,Venezuela
+Salomon,Rondon,11/2,13/8,20/1,13/2
+Josef,Martinez,6/1,7/4,22/1,7/1
+Anthony,Blondell,8/1,5/2,28/1,9/1
+Edder,Farias,8/1,5/2,28/1,9/1
+Ronaldo,Chacon,9/1,3/1,33/1,11/1
+Romulo,Otero,11/1,4/1,,
+Yohandry,Orozco,11/1,4/1,,
+Jefferson,Savarino,12/1,9/2,,
+Samuel,Sosa,12/1,9/2,,
+Jhon,Murillo,14/1,5/1,,
+Sergio,Cordova,14/1,5/1,,
+Yefferson,Soteldo,14/1,5/1,,
+Ronaldo,Lucena,25/1,9/1,,
+Jhon,Chancellor,33/1,12/1,,
+Junior,Moreno,33/1,12/1,,
+Mikel,Villanueva,33/1,12/1,,
+Jose,Velazquez,40/1,14/1,,
+Rubert,Quijada,40/1,14/1,,
+Wilker,Angel,40/1,14/1,,
+Jose,Hernandez,50/1,18/1,,
+Juan,Colina,50/1,18/1,,
+Ronald,Hernandez,50/1,18/1,,
+Victor,Garcia,50/1,18/1,,
+Tomas,Rincon,66/1,25/1,,
+
+=== AWAY TEAM ===
+team name,Uruguay
+Edinson,Cavani,3/1,8/11,9/2,5/4
+Luis,Suarez,3/1,8/11,9/2,5/4
+Maximiliano,Gomez,4/1,5/4,6/1,15/8
+Jonathan,Urretavizcaya,5/1,3/2,15/2,11/5
+Cristhian,Stuani,6/1,7/4,17/2,13/5
+Nicolas,Lodeiro,9/1,3/1,14/1,9/2
+Cristian,Rodriguez,11/1,4/1,,
+Gaston,Pereiro,11/1,4/1,,
+Giorgian De,Arrascaeta,11/1,4/1,,
+Carlos,Sanchez,14/1,5/1,,
+Nahitan,Nandez,14/1,5/1,,
+Alvaro,Gonzalez,16/1,11/2,,
+Rodrigo,Bentancur,16/1,11/2,,
+Federico,Valverde,20/1,7/1,,
+Diego,Godin,25/1,9/1,,
+Matias,Vecino,25/1,9/1,,
+Mauricio,Lemos,25/1,9/1,,
+Egidio Arevalo,Rios,33/1,12/1,,
+Jose,Gimenez,33/1,12/1,,
+Martin,Caceres,33/1,12/1,,
+Mathias,Corujo,33/1,12/1,,
+Maxi,Pereira,33/1,12/1,,
+Sebastian,Coates,33/1,12/1,,
+Gaston,Silva,50/1,18/1,,
+
+=== WINCASTS ===
+S.Rondon/Venezuela,20/1,13/2
+J.Martinez/Venezuela,22/1,7/1
+A.Blondell/Venezuela,28/1,9/1
+E.Farias/Venezuela,28/1,9/1
+R.Chacon/Venezuela,33/1,11/1
+E.Cavani/Uruguay,9/2,5/4
+L.Suarez/Uruguay,9/2,5/4
+M.Gomez/Uruguay,6/1,15/8
+J.Urretavizcaya/Uruguay,15/2,11/5
+C.Stuani/Uruguay,17/2,13/5
+N.Lodeiro/Uruguay,14/1,9/2</textarea>
+		
+		<table>
+			<tr>
+				<td class="team_name">
+				Venezuela
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="team_name">
+				Uruguay
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<td class="player_name_header">
+					Player
+				</td>
+				<td class="first_scorer_price_header">
+					1st Goal
+				</td>
+				<td class="anytime_scorer_price_header">
+					Anytime
+				</td>
+				<td class="first_goal_wincast_price_header">
+					1st Goal<br>Wincast
+				</td>
+				<td class="anytime_wincast_price_header">
+					Anytime<br>Wincast
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name_header">
+					Player
+				</td>
+				<td class="first_scorer_price_header">
+					1st Goal
+				</td>
+				<td class="anytime_scorer_price_header">
+					Anytime
+				</td>
+				<td class="first_goal_wincast_price_header">
+					1st Goal<br>Wincast
+				</td>
+				<td class="anytime_wincast_price_header">
+					Anytime<br>Wincast
+				</td>
+			</tr>
+      			<tr>
+				<td class="player_name">
+					Salomon <span class="letters_to_type">Ro</span>ndon
+				</td>
+				<td class="first_scorer_price">
+					11/2
+				</td>
+				<td class="anytime_scorer_price">
+					13/8
+				</td>
+				<td class="first_goal_wincast_price">
+					20/1
+				</td>
+				<td class="anytime_wincast_price">
+					13/2
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Edinson <span class="letters_to_type">Cav</span>ani
+				</td>
+				<td class="first_scorer_price">
+					3/1
+				</td>
+				<td class="anytime_scorer_price">
+					8/11
+				</td>
+				<td class="first_goal_wincast_price">
+					9/2
+				</td>
+				<td class="anytime_wincast_price">
+					5/4
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Josef <span class="letters_to_type">Ma</span>rtinez
+				</td>
+				<td class="first_scorer_price">
+					6/1
+				</td>
+				<td class="anytime_scorer_price">
+					7/4
+				</td>
+				<td class="first_goal_wincast_price">
+					22/1
+				</td>
+				<td class="anytime_wincast_price">
+					7/1
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Luis <span class="letters_to_type">Su</span>arez
+				</td>
+				<td class="first_scorer_price">
+					3/1
+				</td>
+				<td class="anytime_scorer_price">
+					8/11
+				</td>
+				<td class="first_goal_wincast_price">
+					9/2
+				</td>
+				<td class="anytime_wincast_price">
+					5/4
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Anthony <span class="letters_to_type">B</span>londell
+				</td>
+				<td class="first_scorer_price">
+					8/1
+				</td>
+				<td class="anytime_scorer_price">
+					5/2
+				</td>
+				<td class="first_goal_wincast_price">
+					28/1
+				</td>
+				<td class="anytime_wincast_price">
+					9/1
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Maximiliano <span class="letters_to_type">Gom</span>ez
+				</td>
+				<td class="first_scorer_price">
+					4/1
+				</td>
+				<td class="anytime_scorer_price">
+					5/4
+				</td>
+				<td class="first_goal_wincast_price">
+					6/1
+				</td>
+				<td class="anytime_wincast_price">
+					15/8
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Edder <span class="letters_to_type">F</span>arias
+				</td>
+				<td class="first_scorer_price">
+					8/1
+				</td>
+				<td class="anytime_scorer_price">
+					5/2
+				</td>
+				<td class="first_goal_wincast_price">
+					28/1
+				</td>
+				<td class="anytime_wincast_price">
+					9/1
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Jonathan <span class="letters_to_type">U</span>rretavizcaya
+				</td>
+				<td class="first_scorer_price">
+					5/1
+				</td>
+				<td class="anytime_scorer_price">
+					3/2
+				</td>
+				<td class="first_goal_wincast_price">
+					15/2
+				</td>
+				<td class="anytime_wincast_price">
+					11/5
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Ronaldo <span class="letters_to_type">Chac</span>on
+				</td>
+				<td class="first_scorer_price">
+					9/1
+				</td>
+				<td class="anytime_scorer_price">
+					3/1
+				</td>
+				<td class="first_goal_wincast_price">
+					33/1
+				</td>
+				<td class="anytime_wincast_price">
+					11/1
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Cristhian <span class="letters_to_type">St</span>uani
+				</td>
+				<td class="first_scorer_price">
+					6/1
+				</td>
+				<td class="anytime_scorer_price">
+					7/4
+				</td>
+				<td class="first_goal_wincast_price">
+					17/2
+				</td>
+				<td class="anytime_wincast_price">
+					13/5
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Romulo <span class="letters_to_type">Ot</span>ero
+				</td>
+				<td class="first_scorer_price">
+					11/1
+				</td>
+				<td class="anytime_scorer_price">
+					4/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Nicolas <span class="letters_to_type">Lo</span>deiro
+				</td>
+				<td class="first_scorer_price">
+					9/1
+				</td>
+				<td class="anytime_scorer_price">
+					3/1
+				</td>
+				<td class="first_goal_wincast_price">
+					14/1
+				</td>
+				<td class="anytime_wincast_price">
+					9/2
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Yohandry <span class="letters_to_type">Or</span>ozco
+				</td>
+				<td class="first_scorer_price">
+					11/1
+				</td>
+				<td class="anytime_scorer_price">
+					4/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Cristian <span class="letters_to_type">Ro</span>driguez
+				</td>
+				<td class="first_scorer_price">
+					11/1
+				</td>
+				<td class="anytime_scorer_price">
+					4/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Jefferson <span class="letters_to_type">Sa</span>varino
+				</td>
+				<td class="first_scorer_price">
+					12/1
+				</td>
+				<td class="anytime_scorer_price">
+					9/2
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Gaston <span class="letters_to_type">Pereiro</span>
+				</td>
+				<td class="first_scorer_price">
+					11/1
+				</td>
+				<td class="anytime_scorer_price">
+					4/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Samuel <span class="letters_to_type">Sos</span>a
+				</td>
+				<td class="first_scorer_price">
+					12/1
+				</td>
+				<td class="anytime_scorer_price">
+					9/2
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Giorgian De <span class="letters_to_type">A</span>rrascaeta
+				</td>
+				<td class="first_scorer_price">
+					11/1
+				</td>
+				<td class="anytime_scorer_price">
+					4/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Jhon <span class="letters_to_type">Mu</span>rillo
+				</td>
+				<td class="first_scorer_price">
+					14/1
+				</td>
+				<td class="anytime_scorer_price">
+					5/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Carlos <span class="letters_to_type">Sa</span>nchez
+				</td>
+				<td class="first_scorer_price">
+					14/1
+				</td>
+				<td class="anytime_scorer_price">
+					5/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Sergio <span class="letters_to_type">Cor</span>dova
+				</td>
+				<td class="first_scorer_price">
+					14/1
+				</td>
+				<td class="anytime_scorer_price">
+					5/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Nahitan <span class="letters_to_type">N</span>andez
+				</td>
+				<td class="first_scorer_price">
+					14/1
+				</td>
+				<td class="anytime_scorer_price">
+					5/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Yefferson <span class="letters_to_type">Sot</span>eldo
+				</td>
+				<td class="first_scorer_price">
+					14/1
+				</td>
+				<td class="anytime_scorer_price">
+					5/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Alvaro <span class="letters_to_type">Gon</span>zalez
+				</td>
+				<td class="first_scorer_price">
+					16/1
+				</td>
+				<td class="anytime_scorer_price">
+					11/2
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Ronaldo <span class="letters_to_type">L</span>ucena
+				</td>
+				<td class="first_scorer_price">
+					25/1
+				</td>
+				<td class="anytime_scorer_price">
+					9/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Rodrigo <span class="letters_to_type">B</span>entancur
+				</td>
+				<td class="first_scorer_price">
+					16/1
+				</td>
+				<td class="anytime_scorer_price">
+					11/2
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Jhon <span class="letters_to_type">Chan</span>cellor
+				</td>
+				<td class="first_scorer_price">
+					33/1
+				</td>
+				<td class="anytime_scorer_price">
+					12/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Federico <span class="letters_to_type">Va</span>lverde
+				</td>
+				<td class="first_scorer_price">
+					20/1
+				</td>
+				<td class="anytime_scorer_price">
+					7/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Junior <span class="letters_to_type">Mo</span>reno
+				</td>
+				<td class="first_scorer_price">
+					33/1
+				</td>
+				<td class="anytime_scorer_price">
+					12/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Diego <span class="letters_to_type">God</span>in
+				</td>
+				<td class="first_scorer_price">
+					25/1
+				</td>
+				<td class="anytime_scorer_price">
+					9/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Mikel <span class="letters_to_type">Vi</span>llanueva
+				</td>
+				<td class="first_scorer_price">
+					33/1
+				</td>
+				<td class="anytime_scorer_price">
+					12/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Matias <span class="letters_to_type">Ve</span>cino
+				</td>
+				<td class="first_scorer_price">
+					25/1
+				</td>
+				<td class="anytime_scorer_price">
+					9/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Jose <span class="letters_to_type">Ve</span>lazquez
+				</td>
+				<td class="first_scorer_price">
+					40/1
+				</td>
+				<td class="anytime_scorer_price">
+					14/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Mauricio <span class="letters_to_type">Le</span>mos
+				</td>
+				<td class="first_scorer_price">
+					25/1
+				</td>
+				<td class="anytime_scorer_price">
+					9/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Rubert <span class="letters_to_type">Q</span>uijada
+				</td>
+				<td class="first_scorer_price">
+					40/1
+				</td>
+				<td class="anytime_scorer_price">
+					14/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Egidio Arevalo <span class="letters_to_type">Ri</span>os
+				</td>
+				<td class="first_scorer_price">
+					33/1
+				</td>
+				<td class="anytime_scorer_price">
+					12/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Wilker <span class="letters_to_type">A</span>ngel
+				</td>
+				<td class="first_scorer_price">
+					40/1
+				</td>
+				<td class="anytime_scorer_price">
+					14/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Jose <span class="letters_to_type">Gi</span>menez
+				</td>
+				<td class="first_scorer_price">
+					33/1
+				</td>
+				<td class="anytime_scorer_price">
+					12/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Jose <span class="letters_to_type">H</span>ernandez
+				</td>
+				<td class="first_scorer_price">
+					50/1
+				</td>
+				<td class="anytime_scorer_price">
+					18/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Martin <span class="letters_to_type">Cac</span>eres
+				</td>
+				<td class="first_scorer_price">
+					33/1
+				</td>
+				<td class="anytime_scorer_price">
+					12/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Juan <span class="letters_to_type">Col</span>ina
+				</td>
+				<td class="first_scorer_price">
+					50/1
+				</td>
+				<td class="anytime_scorer_price">
+					18/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Mathias <span class="letters_to_type">Cor</span>ujo
+				</td>
+				<td class="first_scorer_price">
+					33/1
+				</td>
+				<td class="anytime_scorer_price">
+					12/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Ronald <span class="letters_to_type">H</span>ernandez
+				</td>
+				<td class="first_scorer_price">
+					50/1
+				</td>
+				<td class="anytime_scorer_price">
+					18/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Maxi <span class="letters_to_type">Pereira</span>
+				</td>
+				<td class="first_scorer_price">
+					33/1
+				</td>
+				<td class="anytime_scorer_price">
+					12/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Victor <span class="letters_to_type">G</span>arcia
+				</td>
+				<td class="first_scorer_price">
+					50/1
+				</td>
+				<td class="anytime_scorer_price">
+					18/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Sebastian <span class="letters_to_type">Coa</span>tes
+				</td>
+				<td class="first_scorer_price">
+					33/1
+				</td>
+				<td class="anytime_scorer_price">
+					12/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Tomas <span class="letters_to_type">Ri</span>ncon
+				</td>
+				<td class="first_scorer_price">
+					66/1
+				</td>
+				<td class="anytime_scorer_price">
+					25/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Gaston <span class="letters_to_type">Si</span>lva
+				</td>
+				<td class="first_scorer_price">
+					50/1
+				</td>
+				<td class="anytime_scorer_price">
+					18/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+			<tr><tr><td></td><td><textarea style="width: 70px;">11/2
+6/1
+8/1
+8/1
+9/1
+11/1
+11/1
+12/1
+12/1
+14/1
+14/1
+14/1
+25/1
+33/1
+33/1
+33/1
+40/1
+40/1
+40/1
+50/1
+50/1
+50/1
+50/1
+66/1</textarea></td><td><textarea style="width: 70px;">13/8
+7/4
+5/2
+5/2
+3/1
+4/1
+4/1
+9/2
+9/2
+5/1
+5/1
+5/1
+9/1
+12/1
+12/1
+12/1
+14/1
+14/1
+14/1
+18/1
+18/1
+18/1
+18/1
+25/1</textarea></td><td></td><td></td><td></td><td></td><td><textarea style="width: 70px;">3/1
+3/1
+4/1
+5/1
+6/1
+9/1
+11/1
+11/1
+11/1
+14/1
+14/1
+16/1
+16/1
+20/1
+25/1
+25/1
+25/1
+33/1
+33/1
+33/1
+33/1
+33/1
+33/1
+50/1</textarea></td><td><textarea style="width: 70px;">8/11
+8/11
+5/4
+3/2
+7/4
+3/1
+4/1
+4/1
+4/1
+5/1
+5/1
+11/2
+11/2
+7/1
+9/1
+9/1
+9/1
+12/1
+12/1
+12/1
+12/1
+12/1
+12/1
+18/1</textarea></td><td><textarea style="width: 70px;">20/1
+22/1
+28/1
+28/1
+33/1
+9/2
+9/2
+6/1
+15/2
+17/2
+14/1</textarea></td><td><textarea style="width: 70px;">13/2
+7/1
+9/1
+9/1
+11/1
+5/4
+5/4
+15/8
+11/5
+13/5
+9/2</textarea></td></tr>
+
+		</table>
+		
+		</div>		<div class="match_div" id="div_2">
+	
+		<textarea rows="35" cols="25" style="float:left; margin: 10px;">
+BULGARIA PLAYERS:
+Andrei,Galabinov
+Georgi,Kostadinov
+Spas,Delev
+Bozhidar,Kraev
+Ivaylo,Dimitrov
+Ivaylo,Chochev
+Stanislav,Manolev
+Simeon,Slavchev
+Todor,Nedelev
+Aleksandar,Tsvetkov
+Kristiyan,Malinov
+Martin,Raynov
+Anton,Nedyalkov
+Bozhidar,Chorbadzhiyski
+Nikolai,Bodurov
+Petar,Zanev
+Tsvetomir,Panov
+Vasil,Bozhikov
+Strahil,Popov
+
+FRANCE PLAYERS:
+Antoine,Griezmann
+Olivier,Giroud
+Alexandre,Lacazette
+Kylian,Mbappe
+Corentin,Tolisso
+Dimitri,Payet
+Thomas,Lemar
+Florian,Thauvin
+Kingsley,Coman
+Adrien,Rabiot
+Blaise,Matuidi
+Moussa,Sissoko
+Djibril,Sidibe
+Layvin,Kurzawa
+Adil,Rami
+Christophe,Jallet
+N'Golo,Kante
+Raphael,Varane
+Laurent,Koscielny
+Lucas,Digne
+Samuel,Umtiti
+Presnel,Kimpembe
+
+WINCAST STRINGS (14):
+Galabinov/Bulgaria
+Kostadinov/Bulgaria
+Delev/Bulgaria
+Griezmann/France
+Giroud/France
+Lacazette/France
+Mbappe/France
+Tolisso/France
+Payet/France
+Lemar/France
+Thauvin/France
+Coman/France
+Rabiot/France
+Matuidi/France
+
+***** CSV DATA *****
+
+=== HOME TEAM ===
+team name,Bulgaria
+Andrei,Galabinov,11/1,4/1,75/1,25/1
+Georgi,Kostadinov,12/1,9/2,80/1,28/1
+Spas,Delev,12/1,9/2,80/1,28/1
+Bozhidar,Kraev,14/1,5/1,,
+Ivaylo,Dimitrov,14/1,5/1,,
+Ivaylo,Chochev,16/1,11/2,,
+Stanislav,Manolev,20/1,7/1,,
+Simeon,Slavchev,25/1,9/1,,
+Todor,Nedelev,25/1,9/1,,
+Aleksandar,Tsvetkov,33/1,12/1,,
+Kristiyan,Malinov,33/1,12/1,,
+Martin,Raynov,33/1,12/1,,
+Anton,Nedyalkov,100/1,40/1,,
+Bozhidar,Chorbadzhiyski,100/1,40/1,,
+Nikolai,Bodurov,100/1,40/1,,
+Petar,Zanev,100/1,40/1,,
+Tsvetomir,Panov,100/1,40/1,,
+Vasil,Bozhikov,100/1,40/1,,
+Strahil,Popov,150/1,66/1,,
+
+=== AWAY TEAM ===
+team name,France
+Antoine,Griezmann,3/1,8/13,7/2,4/5
+Olivier,Giroud,3/1,8/13,7/2,4/5
+Alexandre,Lacazette,7/2,5/6,4/1,1/1
+Kylian,Mbappe,7/2,5/6,4/1,1/1
+Corentin,Tolisso,5/1,11/8,6/1,8/5
+Dimitri,Payet,5/1,11/8,6/1,8/5
+Thomas,Lemar,5/1,11/8,6/1,8/5
+Florian,Thauvin,6/1,13/8,7/1,15/8
+Kingsley,Coman,13/2,7/4,15/2,2/1
+Adrien,Rabiot,9/1,5/2,11/1,3/1
+Blaise,Matuidi,9/1,5/2,11/1,3/1
+Moussa,Sissoko,12/1,7/2,,
+Djibril,Sidibe,14/1,4/1,,
+Layvin,Kurzawa,14/1,4/1,,
+Adil,Rami,16/1,9/2,,
+Christophe,Jallet,16/1,9/2,,
+N'Golo,Kante,16/1,9/2,,
+Raphael,Varane,20/1,11/2,,
+Laurent,Koscielny,25/1,7/1,,
+Lucas,Digne,33/1,9/1,,
+Samuel,Umtiti,33/1,9/1,,
+Presnel,Kimpembe,50/1,14/1,,
+
+=== WINCASTS ===
+A.Galabinov/Bulgaria,75/1,25/1
+G.Kostadinov/Bulgaria,80/1,28/1
+S.Delev/Bulgaria,80/1,28/1
+A.Griezmann/France,7/2,4/5
+O.Giroud/France,7/2,4/5
+A.Lacazette/France,4/1,1/1
+K.Mbappe/France,4/1,1/1
+C.Tolisso/France,6/1,8/5
+D.Payet/France,6/1,8/5
+T.Lemar/France,6/1,8/5
+F.Thauvin/France,7/1,15/8
+K.Coman/France,15/2,2/1
+A.Rabiot/France,11/1,3/1
+B.Matuidi/France,11/1,3/1</textarea>
+		
+		<table>
+			<tr>
+				<td class="team_name">
+				Bulgaria
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="team_name">
+				France
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+			</tr>
+			<tr>
+				<td class="player_name_header">
+					Player
+				</td>
+				<td class="first_scorer_price_header">
+					1st Goal
+				</td>
+				<td class="anytime_scorer_price_header">
+					Anytime
+				</td>
+				<td class="first_goal_wincast_price_header">
+					1st Goal<br>Wincast
+				</td>
+				<td class="anytime_wincast_price_header">
+					Anytime<br>Wincast
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name_header">
+					Player
+				</td>
+				<td class="first_scorer_price_header">
+					1st Goal
+				</td>
+				<td class="anytime_scorer_price_header">
+					Anytime
+				</td>
+				<td class="first_goal_wincast_price_header">
+					1st Goal<br>Wincast
+				</td>
+				<td class="anytime_wincast_price_header">
+					Anytime<br>Wincast
+				</td>
+			</tr>
+      			<tr>
+				<td class="player_name">
+					Andrei <span class="letters_to_type">G</span>alabinov
+				</td>
+				<td class="first_scorer_price">
+					11/1
+				</td>
+				<td class="anytime_scorer_price">
+					4/1
+				</td>
+				<td class="first_goal_wincast_price">
+					75/1
+				</td>
+				<td class="anytime_wincast_price">
+					25/1
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Antoine <span class="letters_to_type">Gr</span>iezmann
+				</td>
+				<td class="first_scorer_price">
+					3/1
+				</td>
+				<td class="anytime_scorer_price">
+					8/13
+				</td>
+				<td class="first_goal_wincast_price">
+					7/2
+				</td>
+				<td class="anytime_wincast_price">
+					4/5
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Georgi <span class="letters_to_type">Ko</span>stadinov
+				</td>
+				<td class="first_scorer_price">
+					12/1
+				</td>
+				<td class="anytime_scorer_price">
+					9/2
+				</td>
+				<td class="first_goal_wincast_price">
+					80/1
+				</td>
+				<td class="anytime_wincast_price">
+					28/1
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Olivier <span class="letters_to_type">Gi</span>roud
+				</td>
+				<td class="first_scorer_price">
+					3/1
+				</td>
+				<td class="anytime_scorer_price">
+					8/13
+				</td>
+				<td class="first_goal_wincast_price">
+					7/2
+				</td>
+				<td class="anytime_wincast_price">
+					4/5
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Spas <span class="letters_to_type">De</span>lev
+				</td>
+				<td class="first_scorer_price">
+					12/1
+				</td>
+				<td class="anytime_scorer_price">
+					9/2
+				</td>
+				<td class="first_goal_wincast_price">
+					80/1
+				</td>
+				<td class="anytime_wincast_price">
+					28/1
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Alexandre <span class="letters_to_type">La</span>cazette
+				</td>
+				<td class="first_scorer_price">
+					7/2
+				</td>
+				<td class="anytime_scorer_price">
+					5/6
+				</td>
+				<td class="first_goal_wincast_price">
+					4/1
+				</td>
+				<td class="anytime_wincast_price">
+					1/1
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Bozhidar <span class="letters_to_type">Kr</span>aev
+				</td>
+				<td class="first_scorer_price">
+					14/1
+				</td>
+				<td class="anytime_scorer_price">
+					5/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Kylian <span class="letters_to_type">Mb</span>appe
+				</td>
+				<td class="first_scorer_price">
+					7/2
+				</td>
+				<td class="anytime_scorer_price">
+					5/6
+				</td>
+				<td class="first_goal_wincast_price">
+					4/1
+				</td>
+				<td class="anytime_wincast_price">
+					1/1
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Ivaylo <span class="letters_to_type">Di</span>mitrov
+				</td>
+				<td class="first_scorer_price">
+					14/1
+				</td>
+				<td class="anytime_scorer_price">
+					5/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Corentin <span class="letters_to_type">To</span>lisso
+				</td>
+				<td class="first_scorer_price">
+					5/1
+				</td>
+				<td class="anytime_scorer_price">
+					11/8
+				</td>
+				<td class="first_goal_wincast_price">
+					6/1
+				</td>
+				<td class="anytime_wincast_price">
+					8/5
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Ivaylo <span class="letters_to_type">Choc</span>hev
+				</td>
+				<td class="first_scorer_price">
+					16/1
+				</td>
+				<td class="anytime_scorer_price">
+					11/2
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Dimitri <span class="letters_to_type">P</span>ayet
+				</td>
+				<td class="first_scorer_price">
+					5/1
+				</td>
+				<td class="anytime_scorer_price">
+					11/8
+				</td>
+				<td class="first_goal_wincast_price">
+					6/1
+				</td>
+				<td class="anytime_wincast_price">
+					8/5
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Stanislav <span class="letters_to_type">Man</span>olev
+				</td>
+				<td class="first_scorer_price">
+					20/1
+				</td>
+				<td class="anytime_scorer_price">
+					7/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Thomas <span class="letters_to_type">Le</span>mar
+				</td>
+				<td class="first_scorer_price">
+					5/1
+				</td>
+				<td class="anytime_scorer_price">
+					11/8
+				</td>
+				<td class="first_goal_wincast_price">
+					6/1
+				</td>
+				<td class="anytime_wincast_price">
+					8/5
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Simeon <span class="letters_to_type">S</span>lavchev
+				</td>
+				<td class="first_scorer_price">
+					25/1
+				</td>
+				<td class="anytime_scorer_price">
+					9/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Florian <span class="letters_to_type">Th</span>auvin
+				</td>
+				<td class="first_scorer_price">
+					6/1
+				</td>
+				<td class="anytime_scorer_price">
+					13/8
+				</td>
+				<td class="first_goal_wincast_price">
+					7/1
+				</td>
+				<td class="anytime_wincast_price">
+					15/8
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Todor <span class="letters_to_type">Nede</span>lev
+				</td>
+				<td class="first_scorer_price">
+					25/1
+				</td>
+				<td class="anytime_scorer_price">
+					9/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Kingsley <span class="letters_to_type">C</span>oman
+				</td>
+				<td class="first_scorer_price">
+					13/2
+				</td>
+				<td class="anytime_scorer_price">
+					7/4
+				</td>
+				<td class="first_goal_wincast_price">
+					15/2
+				</td>
+				<td class="anytime_wincast_price">
+					2/1
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Aleksandar <span class="letters_to_type">T</span>svetkov
+				</td>
+				<td class="first_scorer_price">
+					33/1
+				</td>
+				<td class="anytime_scorer_price">
+					12/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Adrien <span class="letters_to_type">Rab</span>iot
+				</td>
+				<td class="first_scorer_price">
+					9/1
+				</td>
+				<td class="anytime_scorer_price">
+					5/2
+				</td>
+				<td class="first_goal_wincast_price">
+					11/1
+				</td>
+				<td class="anytime_wincast_price">
+					3/1
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Kristiyan <span class="letters_to_type">Mal</span>inov
+				</td>
+				<td class="first_scorer_price">
+					33/1
+				</td>
+				<td class="anytime_scorer_price">
+					12/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Blaise <span class="letters_to_type">Ma</span>tuidi
+				</td>
+				<td class="first_scorer_price">
+					9/1
+				</td>
+				<td class="anytime_scorer_price">
+					5/2
+				</td>
+				<td class="first_goal_wincast_price">
+					11/1
+				</td>
+				<td class="anytime_wincast_price">
+					3/1
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Martin <span class="letters_to_type">R</span>aynov
+				</td>
+				<td class="first_scorer_price">
+					33/1
+				</td>
+				<td class="anytime_scorer_price">
+					12/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Moussa <span class="letters_to_type">Sis</span>soko
+				</td>
+				<td class="first_scorer_price">
+					12/1
+				</td>
+				<td class="anytime_scorer_price">
+					7/2
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Anton <span class="letters_to_type">Nedy</span>alkov
+				</td>
+				<td class="first_scorer_price">
+					100/1
+				</td>
+				<td class="anytime_scorer_price">
+					40/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Djibril <span class="letters_to_type">Sid</span>ibe
+				</td>
+				<td class="first_scorer_price">
+					14/1
+				</td>
+				<td class="anytime_scorer_price">
+					4/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Bozhidar <span class="letters_to_type">Chor</span>badzhiyski
+				</td>
+				<td class="first_scorer_price">
+					100/1
+				</td>
+				<td class="anytime_scorer_price">
+					40/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Layvin <span class="letters_to_type">Ku</span>rzawa
+				</td>
+				<td class="first_scorer_price">
+					14/1
+				</td>
+				<td class="anytime_scorer_price">
+					4/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Nikolai <span class="letters_to_type">Bod</span>urov
+				</td>
+				<td class="first_scorer_price">
+					100/1
+				</td>
+				<td class="anytime_scorer_price">
+					40/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Adil <span class="letters_to_type">Ram</span>i
+				</td>
+				<td class="first_scorer_price">
+					16/1
+				</td>
+				<td class="anytime_scorer_price">
+					9/2
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Petar <span class="letters_to_type">Z</span>anev
+				</td>
+				<td class="first_scorer_price">
+					100/1
+				</td>
+				<td class="anytime_scorer_price">
+					40/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Christophe <span class="letters_to_type">J</span>allet
+				</td>
+				<td class="first_scorer_price">
+					16/1
+				</td>
+				<td class="anytime_scorer_price">
+					9/2
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Tsvetomir <span class="letters_to_type">Pa</span>nov
+				</td>
+				<td class="first_scorer_price">
+					100/1
+				</td>
+				<td class="anytime_scorer_price">
+					40/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					N'Golo <span class="letters_to_type">Ka</span>nte
+				</td>
+				<td class="first_scorer_price">
+					16/1
+				</td>
+				<td class="anytime_scorer_price">
+					9/2
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Vasil <span class="letters_to_type">Boz</span>hikov
+				</td>
+				<td class="first_scorer_price">
+					100/1
+				</td>
+				<td class="anytime_scorer_price">
+					40/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Raphael <span class="letters_to_type">V</span>arane
+				</td>
+				<td class="first_scorer_price">
+					20/1
+				</td>
+				<td class="anytime_scorer_price">
+					11/2
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					Strahil <span class="letters_to_type">Po</span>pov
+				</td>
+				<td class="first_scorer_price">
+					150/1
+				</td>
+				<td class="anytime_scorer_price">
+					66/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Laurent <span class="letters_to_type">Ko</span>scielny
+				</td>
+				<td class="first_scorer_price">
+					25/1
+				</td>
+				<td class="anytime_scorer_price">
+					7/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					
+				</td>
+				<td class="first_scorer_price">
+					
+				</td>
+				<td class="anytime_scorer_price">
+					
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Lucas <span class="letters_to_type">D</span>igne
+				</td>
+				<td class="first_scorer_price">
+					33/1
+				</td>
+				<td class="anytime_scorer_price">
+					9/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					
+				</td>
+				<td class="first_scorer_price">
+					
+				</td>
+				<td class="anytime_scorer_price">
+					
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Samuel <span class="letters_to_type">U</span>mtiti
+				</td>
+				<td class="first_scorer_price">
+					33/1
+				</td>
+				<td class="anytime_scorer_price">
+					9/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+			<tr>			<tr>
+				<td class="player_name">
+					
+				</td>
+				<td class="first_scorer_price">
+					
+				</td>
+				<td class="anytime_scorer_price">
+					
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+				<td class="centre_column">
+				</td>
+				<td class="player_name">
+					Presnel <span class="letters_to_type">Ki</span>mpembe
+				</td>
+				<td class="first_scorer_price">
+					50/1
+				</td>
+				<td class="anytime_scorer_price">
+					14/1
+				</td>
+				<td class="first_goal_wincast_price">
+					
+				</td>
+				<td class="anytime_wincast_price">
+					
+				</td>
+			<tr><tr><td></td><td><textarea style="width: 70px;">11/1
+12/1
+12/1
+14/1
+14/1
+16/1
+20/1
+25/1
+25/1
+33/1
+33/1
+33/1
+100/1
+100/1
+100/1
+100/1
+100/1
+100/1
+150/1</textarea></td><td><textarea style="width: 70px;">4/1
+9/2
+9/2
+5/1
+5/1
+11/2
+7/1
+9/1
+9/1
+12/1
+12/1
+12/1
+40/1
+40/1
+40/1
+40/1
+40/1
+40/1
+66/1</textarea></td><td></td><td></td><td></td><td></td><td><textarea style="width: 70px;">3/1
+3/1
+7/2
+7/2
+5/1
+5/1
+5/1
+6/1
+13/2
+9/1
+9/1
+12/1
+14/1
+14/1
+16/1
+16/1
+16/1
+20/1
+25/1
+33/1
+33/1
+50/1</textarea></td><td><textarea style="width: 70px;">8/13
+8/13
+5/6
+5/6
+11/8
+11/8
+11/8
+13/8
+7/4
+5/2
+5/2
+7/2
+4/1
+4/1
+9/2
+9/2
+9/2
+11/2
+7/1
+9/1
+9/1
+14/1</textarea></td><td><textarea style="width: 70px;">75/1
+80/1
+80/1
+7/2
+7/2
+4/1
+4/1
+6/1
+6/1
+6/1
+7/1
+15/2
+11/1
+11/1</textarea></td><td><textarea style="width: 70px;">25/1
+28/1
+28/1
+4/5
+4/5
+1/1
+1/1
+8/5
+8/5
+8/5
+15/8
+2/1
+3/1
+3/1</textarea></td></tr>
+
+		</table>
+		
+		</div>
+
+	</body>
+
+</html>
